@@ -1,0 +1,33 @@
+algorithme votesimple
+debut
+    declarer partiA : entier_naturel;
+    declarer partiB : entier_naturel;
+    declarer nbrelec: entier_naturel;
+    declarer vote : entier_naturel;
+    declarer x : entier_naturel;
+    declarer i : entier_naturel;
+
+    partiA <- 0;
+    partiB <- 0;
+    nbrelec <- 1000;
+    entier vote <- rand(0,1);
+    boucle
+    tant_que (i <= nbrelec)
+    faire
+    
+    si (vote vaut  0)
+        partiA <- partiA + 1;
+    sinon
+        partiB <- partiB +1;
+    fsi
+    i <- i + 1;
+    ffaire
+    fboucle
+
+    afficher (partiA,partiB);
+    si (partiA > partiB)
+        afficher ("le parti gagnant est le partiA");
+    sinon_si (partiA < partiB) 
+        afficher ("le partie gagnant est le partiB"); 
+    fsi  
+fin
