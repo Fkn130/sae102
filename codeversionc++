@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdlib> 
+
+
+using namespace std;
+
+
+int main() {
+
+    int partiA = 0;    
+    int partiB = 0;
+    int nbrelec = 1000;     
+    int vote;               
+    int i = 0;               
+
+
+    
+    while (i < nbrelec) {
+        
+        vote = rand() <  RAND_MAX / 2;   
+
+        if (vote == 0) {
+            partiA += 1;  
+        } else {
+            partiB += 1; 
+        }
+
+        i += 1; 
+    }
+
+    cout << "Nombre de votes pour le parti A: " << partiA << endl;
+    cout << "Nombre de votes pour le parti B: " << partiB << endl;
+
+    if (partiA > partiB) {
+        cout << "Le parti gagnant est le parti A." << endl;
+    } else if (partiA < partiB) {
+        cout << "Le parti gagnant est le parti B." << endl;
+    } else {
+        cout << "Il y a une égalité entre les partis." << endl;
+    }
+
+    return 0;
+}
